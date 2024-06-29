@@ -1,0 +1,542 @@
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+	list-style:none;
+	text-decoration:none;
+}
+
+html{
+		 scroll-behavior: smooth;
+}
+
+
+body{
+	  font-family: "Amiri", serif;
+  font-weight: 400;
+    font-style: normal;
+	font-size:32px;
+
+}
+
+
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 0 5px #000;
+    height: 70px;
+    background: #0187f7;
+}
+header .headerNav{
+    width: 90%;
+	height:100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    position: relative;
+    border-radius: 15px;
+    padding: 0 10px;
+	   
+}
+header .headerNav .menuList ul li a{
+	color: #fff;
+    font-weight: bold;	
+}
+header .headerNav .menuList .iconsBtn{
+	display: none;
+    position: relative;
+	    height: 50px;
+    width: 50px;
+	overflow:hidden;
+	    cursor: pointer;
+}
+header .headerNav .menuList .iconsBtn i{
+	position: absolute;
+    font-size: 35px;
+    top: 50%;
+    transform: translate(10% ,-50%);
+    color: red;	
+	transition:0.5s;
+}
+header .headerNav .menuList .iconsBtn.activeBtn .menu{
+    transform: translate(10%, 50px);
+}
+header .headerNav .menuList .iconsBtn .close{
+    transform: translate(10%, 50px);
+}
+header .headerNav .menuList .iconsBtn.activeBtn .close{
+    transform: translate(10%, -50%);
+}
+
+
+header .headerNav .menuList ul{
+	display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+	transition:0.5s;
+}
+header .headerNav .menuList ul li{
+    text-align: center;
+    word-break: break-all;
+    min-width: 64px;
+    max-width: fit-content;
+    padding: 10px
+}
+header .headerNav .menuList ul li:hover{
+	background: #1975c3;
+}
+
+.mySection{
+    height: calc(100vh - 113px);
+    background: #245652;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+.mySection .spanAnmated{
+	background: #00000000;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgb(255 255 255 / 50%);
+	transform: translate(var(--x), var(--y));
+	z-index:1;
+	
+}
+.mySection .spanAnmated::before{
+	content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(#fff,#00000000);
+    transform: scale(0.25) translate(-70% ,-70%);
+}
+.mySection .my_description{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+	    direction: rtl;
+		    z-index: 2;
+}
+.mySection .my_description h2{
+
+    font-size: 56px;
+    font-weight: bold;
+}
+.mySection .my_description p{
+	font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    padding: 10px 15px;
+}
+.mySection .my_description .btnProgect{
+    background: transparent;
+    margin: 10px 0;
+    padding: 2px 15px;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: inset 0 0 1px #000, 0 0 1px 0px #fff;
+    transition: 0.5s;
+}
+
+.mySection .my_description .btnProgect a{
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+	    transition: 0.5s;
+}
+.mySection .my_description .btnProgect:hover,
+.mySection .my_description .btnProgect a:hover{
+color:#ff0000;
+    transform: skewY(10deg);
+}
+
+
+#about{
+	min-height:100vh;
+	background:#fff;
+}
+#about h2{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    direction: rtl;
+
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 80px;
+    gap: 40px;
+}
+#about h2 span{
+	    text-align: center;
+    word-break: break-word;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+}
+#about .my_about{
+    direction: rtl;
+    font-size: 32px;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    width: 90%;
+    background: #00000000;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 50px 10px;
+}
+#about .my_about .Get_to_know_me{
+    text-align: right;
+    word-break: break-word;	
+}
+#about .my_about .Get_to_know_me h3{
+	margin-bottom:40px;
+}
+#about .my_about .Get_to_know_me p{
+     font-size: 28px;
+    line-height: 1.7;
+}
+#about .my_about .Get_to_know_me p a{
+    color: green;
+    text-transform: capitalize;
+}
+#about .my_about .Get_to_know_me .btnMassg{
+	transition:0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#about .my_about .Get_to_know_me .btnMassg a{
+    background: #00ff00;
+    padding: 2px 10px;
+    border-radius: 20px;
+    width: 200px;
+	height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+	transition:0.5s;
+}
+#about .my_about .Get_to_know_me .btnMassg a span{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 900;
+}
+#about .my_about .Get_to_know_me .btnMassg a:hover{
+	transform:translateY(-10px)
+}
+#about .my_Skills{
+
+}
+#about .my_Skills h3{
+margin-bottom:40px;
+}
+#about .my_Skills .skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#about .my_Skills .skills span{
+    background: #eee;
+    padding: 0px 10px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* project  */
+
+#project{
+	background-color:#eee;
+
+}
+
+#project h3{
+
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+    direction: rtl;
+	
+}
+#project h3 span:first-child{
+    border-bottom: 2px solid #00ff00;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+#project h3 span:last-child{
+	font-size: 32px;
+    word-break: break-word;
+}
+#project .myProject{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    gap: 10px 10px;
+}
+
+#project .myProject .box{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    direction: rtl;
+    gap: 15px;
+    box-shadow: 0 0 6px #000;
+    transition: 0.5s;
+	    user-select: none;
+
+}
+
+#project .myProject .box h4{
+    font-size: 28px;
+    font-weight: bold;	
+}
+#project .myProject .box a{
+	font-size: 25px;
+}
+#project .myProject .box:hover{
+	    transform: translateY(-5px);
+}
+
+
+
+/* footer */
+
+footer{
+    background-color: #343434;
+	padding: 50px 10px 0;
+}
+footer .media{
+    direction: rtl;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    gap: 15px 10px;
+	padding:30px 0;
+	
+}
+
+
+footer .media .mainProjectMajid{
+	
+}
+footer .media .contectMedia ul{
+	direction: rtl;
+}
+footer .media .contectMedia ul li{
+    margin: 2px 0;
+    padding: 3px 10px;
+}
+footer .media .contectMedia ul li a{
+    transition: 0.5s;
+    transform: translateX(0px);
+    display: block;
+    width: fit-content;
+	color:#fff;
+}
+footer .media .contectMedia ul li a:hover{
+    transform: translateX(-5px);
+}
+
+footer .media .contectMedia .coderHub{
+
+}
+footer .media .contectMedia .coderHub .imgcoderhub{
+    width: 50px;
+    transform: scale(1.5);
+    margin-right: 9px;
+}
+
+footer .media  .contectMedia h6{
+    text-align: right;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+footer .footer{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+	width:90%;
+	margin:0 auto;
+	border-top: 2px solid red;
+}
+footer .footer h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    flex-wrap: nowrap;
+    font-family: "Reem Kufi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+
+}
+
+footer .footer .Star_And_Crescent{
+
+}
+footer .footer  .nameFrontendDeveloper,
+header .headerNav .logo h1,
+.my_descriptionMajid{
+	 font-family: "Reem Kufi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff0000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+ /* 1201 بكسل وأكثر — شاشات كبيرة جدًا، تلفزيون */
+@media (min-width:1201px){
+	body{
+		
+	}
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1200px){
+	body{
+		
+	}
+
+}
+/* 769 بكسل - 1024 بكسل: الشاشات الصغيرة وأجهزة الكمبيوتر المحمولة */
+@media (max-width:1024px){
+	body{
+		
+	}
+	#project .myProject .box{
+		
+	}
+
+}
+/* 481 بكسل - 768 بكسل: أجهزة iPad والأجهزة اللوحية */
+@media (max-width:768px){
+	body{
+	
+	}
+	header .headerNav{
+    width: 100%;}
+	header .headerNav .menuList ul{
+		display: none;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		flex-direction: column;
+	}
+	
+	header .headerNav .menuList ul li{
+		    min-width: 100%;
+			border-bottom: 1px solid #ccc;
+			border-radius: 0;
+	}
+	header .headerNav .menuList .iconsBtn{
+		display:block;
+	}
+	header .headerNav .menuList .activeUl{
+			display: flex;
+			background: #13e4e4;
+			margin-top: 10px;
+	}
+	}
+	#about h2{
+		width:100%
+	}
+	#about .my_about{
+		  grid-template-columns: 1fr ;
+	}
+	footer .media  .contectMedia h6{
+		text-align: center;
+	}
+	footer .media .contectMedia ul li{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+
+}
+@media (max-width:714px){
+		footer .footer{
+		width:100%;
+	}
+	footer .media  .contectMedia:not(:first-child){
+		border-top: 1px solid #ccc;
+	}
+
+}
+/* 320 بكسل - 480 بكسل: الأجهزة المحمولة */
+@media (max-width:480px){
+	body{
+		
+		
+}
+	#about .my_about{
+		width:100%
+	}
+	#project .myProject{
+		width:100%
+	}
+	footer .media{
+
+	width:100%;
+	}
+	footer .footer h5 {
+	 font-size:21px;
+	}
+	footer .footer .nameFrontendDeveloper {
+	 font-size:26px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
