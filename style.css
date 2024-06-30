@@ -479,6 +479,9 @@ header .headerNav .logo h1,
 			background: #13e4e4;
 			margin-top: 10px;
 	}
+	#about .my_about .Get_to_know_me,
+	#about .my_Skills  {
+		text-align:center;
 	}
 	#about h2{
 		width:100%
@@ -498,9 +501,6 @@ header .headerNav .logo h1,
 
 }
 @media (max-width:714px){
-	body{
-		padding: 0 10px;
-	}
 		footer .footer{
 		width:100%;
 	}
@@ -533,11 +533,6 @@ header .headerNav .logo h1,
 	}
 
 }
-
-
-
-
-
 
 
 
