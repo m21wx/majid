@@ -498,6 +498,9 @@ header .headerNav .logo h1,
 
 }
 @media (max-width:714px){
+	body{
+		padding: 0 10px;
+	}
 		footer .footer{
 		width:100%;
 	}
