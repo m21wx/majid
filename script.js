@@ -74,6 +74,10 @@
 			name:'موقع شخصي',
 			projectUl:'https://m21wx.github.io/project-3/',
 		},
+		{
+			name:' قالب-1',
+			projectUl:'https://m21wx.github.io/Template-1/',
+		}
 	
 	]
 	
